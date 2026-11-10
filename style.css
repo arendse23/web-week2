@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px;
+  background-color: #333;
+  color: white;
+}
+
+/* Layout - Grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Card styling */
+.card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h2 {
+  margin: 15px 0 10px;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+.card button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #45a049;
+}
+
+/* Tablet - 2 cards per row */
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+/* Mobile - 1 card per row */
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 300px;
+  }
+}
